@@ -6,8 +6,17 @@
     <title>Vue Js 2</title>
 </head>
 <body>
+    <!-- cuma render text -->
     <div id="app">
-        {{ msg }}
+        <b>{{ msg }}</b>
+    </div>
+
+    <!-- render dengan tag htmlnya yang tereksekusi -->
+    <div id="app2" v-html="msg">
+    </div>
+    
+    <!-- render dengan tag htmlnya yang diabaikan -->
+    <div id="app3" v-text="msg">
     </div>
     
     <script src="assets/vendor/vue.js"></script>
