@@ -7,7 +7,17 @@
 </head>
 <body>
     <div id="app">
-        {{ msg }}
+        <p v-if="show">{{ msg }}</p>
+        <p v-if="isReady == 'ready'">{{ msg }}</p>
+        <br>
+
+        {{ show ? 'show = true' : 'show = false'}}
+        <p v-if="show">if {{ msg }}</p>
+        <p v-else>else {{ msg2 }}</p>
+        
+        <p v-show="show">
+            show - {{ msg2 }} - jika menggunakan v-show, ini akan tetap di render tapi ditambah style display none
+        </p>
     </div>
     
     <script src="assets/vendor/vue.js"></script>
