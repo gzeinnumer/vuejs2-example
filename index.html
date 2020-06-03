@@ -10,7 +10,13 @@
         {{ msg }}
         <br>
         <input type="text" v-model="message" placeholder="ketik sesuatu">
-        <p>{{ message }}</p>
+        <p>akan muncul disini {{ message }}</p>
+        <br>
+        
+        <textarea cols="30" rows="10" placeholder="ketik sesuatu" v-model="textArea"></textarea>
+        <br>
+        akan mencul disini
+        <p style="white-space: pre-line;">{{ textArea }}</p>
     </div>
     
     <script src="assets/vendor/vue.js"></script>
