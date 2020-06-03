@@ -9,14 +9,11 @@
     <div id="app">
         {{ msg }}
         <br>
-        <input type="text" v-model="message" placeholder="ketik sesuatu">
-        <p>akan muncul disini {{ message }}</p>
+        <input type="radio" v-model="rb" value="option1">Option 1
         <br>
-        
-        <textarea cols="30" rows="10" placeholder="ketik sesuatu" v-model="textArea"></textarea>
+        <input type="radio" v-model="rb" value="option2">Option 2
         <br>
-        akan mencul disini
-        <p style="white-space: pre-line;">{{ textArea }}</p>
+        Plihan kamu!!! {{ rb }}
     </div>
     
     <script src="assets/vendor/vue.js"></script>
