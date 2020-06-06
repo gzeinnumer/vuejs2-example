@@ -9,16 +9,16 @@
     <div id="app">
         {{ msg }}
         <br>
-        <img src="assets/img/logo.png" width="500"> V-Bind 
-        <img v-bind:src="imgFile" width="500">
-        <br>
-        <a href="about.html">About Page</a>
-        <br>
-        <a v-bind:href="link">v-bind:href , About Page</a>
-        <br>
-        <p style="color: red;">Red Font</p>
-        <p v-bind:style="{color : colorFont}">v-bind:style , Green Font</p>
-        <p v-bind:style="styleFont">v-bind:style , Red Font</p>
+        <button v-on:click="message = 'Button1 ditekan'">
+            Button1
+        </button>
+        <button @click="message = 'Button2 ditekan'">
+            Button2
+        </button>
+        <button @click="showAlert">
+            Alert!
+        </button>
+        <p>{{ message }}</p>
     </div>
     
     <script src="assets/vendor/vue.js"></script>
