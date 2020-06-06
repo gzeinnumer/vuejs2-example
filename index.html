@@ -9,18 +9,29 @@
     <div id="app">
         {{ msg }}
         <br>
-        <label>Watching Movie</label>
-        <input type="checkbox" value="watching-movie" v-model="cb"/>
+        <p>Pilih Salah Satu</p>
+        <select v-model="select">
+            <option disabled>Pilih satu</option>
+            <option value="kotlin">Kotlin</option>
+            <option value="java">Java</option>
+            <option value="c++">C++</option>
+            <option value="vuejs">VueJs</option>
+        </select>
         <br>
-        <label>Traveling</label>
-        <input type="checkbox" value="traveling" v-model="cb"/>
+        <p>Pilihan Kamu adalah {{ select }}</p>
+        
+        <p>Pilih Mutiple</p>
+        <select v-model="selectMutli" multiple>
+            <option disabled>Pilih satu</option>
+            <option value="kotlin">Kotlin</option>
+            <option value="java">Java</option>
+            <option value="c++">C++</option>
+            <option value="vuejs">VueJs</option>
+        </select>
         <br>
-        <label>Reading</label>
-        <input type="checkbox" value="reading" v-model="cb"/>
-        <br>
-        <p>My Hobbies {{ cb }}</p>
+        <p>Pilihan Kamu adalah {{ selectMutli }}</p>
         <ul>
-            <li v-for="d in cb">{{ d }}</li>
+            <li v-for="d in selectMutli">{{ d }}</li>
         </ul>
     </div>
     
