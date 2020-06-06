@@ -9,30 +9,16 @@
     <div id="app">
         {{ msg }}
         <br>
-        <p>Pilih Salah Satu</p>
-        <select v-model="select">
-            <option disabled>Pilih satu</option>
-            <option value="kotlin">Kotlin</option>
-            <option value="java">Java</option>
-            <option value="c++">C++</option>
-            <option value="vuejs">VueJs</option>
-        </select>
+        <img src="assets/img/logo.png" width="500"> V-Bind 
+        <img v-bind:src="imgFile" width="500">
         <br>
-        <p>Pilihan Kamu adalah {{ select }}</p>
-        
-        <p>Pilih Mutiple</p>
-        <select v-model="selectMutli" multiple>
-            <option disabled>Pilih satu</option>
-            <option value="kotlin">Kotlin</option>
-            <option value="java">Java</option>
-            <option value="c++">C++</option>
-            <option value="vuejs">VueJs</option>
-        </select>
+        <a href="about.html">About Page</a>
         <br>
-        <p>Pilihan Kamu adalah {{ selectMutli }}</p>
-        <ul>
-            <li v-for="d in selectMutli">{{ d }}</li>
-        </ul>
+        <a v-bind:href="link">v-bind:href , About Page</a>
+        <br>
+        <p style="color: red;">Red Font</p>
+        <p v-bind:style="{color : colorFont}">v-bind:style , Green Font</p>
+        <p v-bind:style="styleFont">v-bind:style , Red Font</p>
     </div>
     
     <script src="assets/vendor/vue.js"></script>
