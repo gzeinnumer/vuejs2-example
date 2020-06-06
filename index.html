@@ -10,9 +10,16 @@
         {{ msg }}
         <br>
         <button-center></button-center>
+        <br>
+        <button-center1></button-center1>
     </div>
+
+    <template id="template-1">
+        <button v-on:click="count1++">Clicked Me {{ count1 }} Times</button>
+    </template>
     
     <script src="assets/vendor/vue.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>
+<!-- more https://github.com/gzeinnumer/vuejs_example/blob/part-11/index.html -->
