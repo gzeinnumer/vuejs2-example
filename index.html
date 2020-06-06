@@ -9,16 +9,19 @@
     <div id="app">
         {{ msg }}
         <br>
-        <button v-on:click="message = 'Button1 ditekan'">
-            Button1
-        </button>
-        <button @click="message = 'Button2 ditekan'">
-            Button2
-        </button>
-        <button @click="showAlert">
-            Alert!
-        </button>
-        <p>{{ message }}</p>
+        <label for="">Press Enter Key</label>
+        <input type="text" v-on:keyup.enter="message = 'kamu menekan enter'">
+        <br>
+        <label for="">Press Any Key</label>
+        <input type="text" 
+            @keyup.esc="escKey"
+            @keyup.space="spaceKey"
+            @keyup.up="upKey"
+            @keyup.down="downKey"
+            @keyup.65="aKey"
+        >
+        <br>
+        {{ message }}
     </div>
     
     <script src="assets/vendor/vue.js"></script>
