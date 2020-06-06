@@ -9,19 +9,11 @@
     <div id="app">
         {{ msg }}
         <br>
-        <ul>
-            <li v-for="d in vehicles">
-                Type : {{ d.type }}
-                Brand : {{ d.brand }}
-                Color : {{ d.color }}
-            </li>
-        </ul>
-        <br>
-        <ul>
-            <li v-for="d in object">
-                {{ d }}
-            </li>
-        </ul>
+        <greeting></greeting><br>
+        <greeting></greeting><br>
+        <greeting></greeting><br>
+        
+        <greeting2></greeting2>
     </div>
     
     <script src="assets/vendor/vue.js"></script>
