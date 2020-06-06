@@ -2,24 +2,17 @@ var app = new Vue({
     el: "#app",
     data : {
         msg : "Hello Zein -> Directive v-on",
-        message : ""
+        content : "",
+        vehicles : ["mobil","motor","sepeda"]
     }, 
     methods: {
-        escKey : function(){
-            this.message = "escKey"
+        addVehicles: function(){
+            this.vehicles.push(this.content);
+            this.content = "";
         },
-        spaceKey : function(){
-            this.message = "spaceKey"
-        },
-        upKey : function(){
-            this.message = "upKey"
-        },
-        downKey : function(){
-            this.message = "downKey"
-        },
-        aKey : function(){
-            this.message = "'a' Key"
-        },
+        removeVehicle : function(index){
+            this.vehicles.splice(index, 1);
+        }
     },
 })
 
