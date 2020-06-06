@@ -9,11 +9,19 @@
     <div id="app">
         {{ msg }}
         <br>
-        <input type="radio" v-model="rb" value="option1">Option 1
+        <label>Watching Movie</label>
+        <input type="checkbox" value="watching-movie" v-model="cb"/>
         <br>
-        <input type="radio" v-model="rb" value="option2">Option 2
+        <label>Traveling</label>
+        <input type="checkbox" value="traveling" v-model="cb"/>
         <br>
-        Plihan kamu!!! {{ rb }}
+        <label>Reading</label>
+        <input type="checkbox" value="reading" v-model="cb"/>
+        <br>
+        <p>My Hobbies {{ cb }}</p>
+        <ul>
+            <li v-for="d in cb">{{ d }}</li>
+        </ul>
     </div>
     
     <script src="assets/vendor/vue.js"></script>
