@@ -1,17 +1,13 @@
-Vue.component('greeting', {
-    template : "<b>Hay Zein, by component</b>"
-});
 
-Vue.component('greeting2', {
-    template : `
-        <div>
-            <b>Hello Zein</b> <br>
-            <i>Hello Zein</i> <br>
-            <u>Hello Zein</u>
-        </div>
-    `
+
+Vue.component('button-center', {
+    data : function(){
+        return{
+            count : 0
+        }
+    },
+    template : "<button v-on:click='count++'>Clicked Me {{ count }} Times</button>"
 });
-//petik dekat angka 1 pada keyboard
 
 var app = new Vue({
     el: "#app",
@@ -19,5 +15,3 @@ var app = new Vue({
         msg : "Hello Zein -> Component ",
     }, 
 });
-
-//cari tau kode as key
