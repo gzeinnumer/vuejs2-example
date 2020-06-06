@@ -9,11 +9,9 @@
     <div id="app">
         {{ msg }}
         <br>
-        <input type="radio" v-model="rb" value="option1">Option 1
-        <br>
-        <input type="radio" v-model="rb" value="option2">Option 2
-        <br>
-        Plihan kamu!!! {{ rb }}
+        <blog-post v-for="d in posts_" :key="d.id" :post="d">
+
+        </blog-post>
     </div>
     
     <script src="assets/vendor/vue.js"></script>
