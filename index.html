@@ -9,7 +9,9 @@
     <div id="app">
         {{ msg }}
         <br>
-        <button-center></button-center>
+        <blog-post v-for="d in posts_" :key="d.id" :post="d">
+
+        </blog-post>
     </div>
     
     <script src="assets/vendor/vue.js"></script>
